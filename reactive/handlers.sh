@@ -6,6 +6,7 @@ source charms.reactive.sh
 
 @when_not '${metadata.package}.installed'
 function install_${metadata.package}() {
+    #raw
     # Do your setup here.
     #
     # If your charm has other dependencies before it can install,
@@ -17,6 +18,7 @@ function install_${metadata.package}() {
     #  * https://jujucharms.com/docs/devel/developer-getting-started
     #  * https://github.com/juju-solutions/layer-basic#overview
     #
+    #end raw
     charms.reactive set_state '${metadata.package}.installed'
 }
 
